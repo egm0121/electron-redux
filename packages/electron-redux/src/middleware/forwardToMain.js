@@ -1,8 +1,9 @@
 import { ipcRenderer } from 'electron';
 import validateAction from '../helpers/validateAction';
 
-const forwardToMain = processName => store => next => action => {
-  // eslint-disable-line no-unused-vars
+const forwardToMain = processName => store => next => (action) => {
+  //eslint-disable-line
+
   if (!validateAction(action)) return next(action);
 
   if (
